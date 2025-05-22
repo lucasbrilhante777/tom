@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*reseta as configs pra eu colocar o que eu quero*/
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*no minimo o body vai ocupar a tela toda*/
+    overflow: hidden; /*a tela nao vai scrollar*/
+    background: linear-gradient(to bottom, #2a1b6b, #5c44a2);
+    position: relative;
+}
+.stars {
+    position: fixed; /*fixa oq eu quero*/
+    top: 0; /*tudo pra cima*/
+    left: 0;/*tudo pra esquerda*/
+    width: 100%;
+    height: 100%;
+    background-image:
+    radial-gradient(1px 1px at 25% 15%, white, transparent),
+    radial-gradient(1px 1px at 50% 40%, white, transparent),
+    radial-gradient(2px 2px at 15% 55%, white, transparent),
+    radial-gradient(1px 1px at 70% 25%, white, transparent),
+    radial-gradient(1.5px 1.5px at 85% 60%, white, transparent),
+    radial-gradient(1px 1px at 35% 75%, white, transparent),
+    radial-gradient(1.5px 1px at 90% 10%, white, transparent),
+    radial-gradient(2px 2px at 5% 30%, white, transparent),
+    radial-gradient(1px 1px at 60% 85%, white, transparent),
+    radial-gradient(1.5px 1.5px at 40% 5%, white, transparent);
+}
+.form {
+    width: 400px;
+    background-color: rgba(255,255,255,0.15);/*valor pra cada cor do rgb, e alpha é a opacidade*/
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px); /*efeito "leitoso"*/
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);/*sombreamento da borda(tem site que faz)*/
+    color: white;
+    border-radius: 16px;/*arredondamento*/
+    padding: 35px;/*para as coisas nao ficarem tao grudadas umas nas outras*/
+}
+.form h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.form-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+.form-box input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none; /*quando clica na caixa a borda nap vai ficar azul*/
+    color: white;
+    background-color: rgba(255,255,255,0.1);
+    font-size: 16px;
+    padding: 0 20px; /*da um espaco no texto da caixa em cima e em baixo de 0 e dos lados de 20px*/
+}
+.form-box input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+.form-box i {
+    position: absolute; /*deixa posicionar em qualquer lugar em relacao a onde ele esta dentro*/
+    right: 20px;
+    font-size: 20px;
+    top: 30%;
+}
+.remember-forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+.remember-forget label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.remember-forget label input {
+    accent-color: rgb(0, 217, 255);
+}
+.remember-forget a {
+    text-decoration: none;/*linha que fica em baixo da frase toda*/
+    color: white;
+}
+.remember-forget a:hover {
+    text-decoration: underline; /*faz aparecer uma linha em baixo do texto e da cor dele quando passa o mouse em cima(hover)*/
+}
+button {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;/*seta muda pra mao quando passa o mouse em cima*/
+    color: #2a1b6b;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+button:hover {
+    background-color: white;
+    transform: translateY(5px);
+}
+.register  {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+.register a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;/*fica mais "grosso"*/   
+}
+.register a:hover {
+    text-decoration: underline;
+}
